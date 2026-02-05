@@ -63,10 +63,12 @@ def main() -> None:
     tokens = tokenize(text)
     clr_ok, akr_ok = check(tokens)
 
-    if clr_ok and akr_ok:
-        print("ACCEPT")
-    else:
-        print("REJECT")
+if clr_ok and akr_ok:
+    print("ACCEPT")
+    sys.exit(0)
+else:
+    print("REJECT")
+    sys.exit(2)
 
 
 if __name__ == "__main__":
