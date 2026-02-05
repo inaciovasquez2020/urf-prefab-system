@@ -24,7 +24,9 @@ jobs:
         run: |
           echo "this text contains no forbidden claims" | urf-llm-check
 
-      - name: Reject CLR violation
-        run: |
-          echo "all neighborhoods are locally indistinguishable everywhere forever even with many cycles" | urf-llm-check && exit 1 || exit 0
+- name: Reject CLR violation
+  run: |
+    output=$(echo "all neighborhoods are locally indistinguishable everywhere forever even with many cycles" | urf-llm-check)
+    echo "$output"
+    test "$output" = "REJECT"
 
