@@ -26,5 +26,5 @@ jobs:
 
       - name: Reject CLR violation
         run: |
-          echo "all neighborhoods are locally indistinguishable everywhere forever even with many cycles" | urf-llm-check
+          ! echo "all neighborhoods are locally indistinguishable everywhere forever even with many cycles" | urf-llm-check
 
