@@ -20,3 +20,8 @@ steps:
     run: |
       chmod +x reproduce.sh
       ./reproduce.sh
+
+  - name: Validate prefab structure
+    run: |
+      chmod +x tools/validate_prefab.sh
+      tools/validate_prefab.sh
