@@ -1,10 +1,9 @@
 URF Prefab System
-
 Purpose
 A prefab-style structural layer for assembling URF-compliant components with explicit assumptions, invariants, and reduction boundaries.
-
+CI status
+https://github.com/inaciovasquez2020/urf-prefab-system/actions/workflows/ci.yml
 What this repository contains
-
 Structural definitions and interfaces for prefab URF components
 Explicit assumption tracking
 Clear separation between proven structure and conditional extensions
