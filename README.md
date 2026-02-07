@@ -1,24 +1,20 @@
 URF Prefab System
 
-Status: CORE / CANONICAL / FROZEN v1
+Purpose
+A prefab-style structural layer for assembling URF-compliant components with explicit assumptions, invariants, and reduction boundaries.
 
-This repository defines the URF Prefab Mode System: a typed algebra for building admissible systems by construction.
+What this repository contains
 
-Contents
-lean/
-  URF–CMI Subadditivity axiom and core prefab skeleton
-certs/
-  Certificate JSON schema for prefab compositions
-src/
-  Minimal verifier enforcing structural invariants
-
-This repository includes an executable admissibility checker for textual claims, exposed as the command `urf-llm-check`. The checker enforces Cycle-Local Rigidity (CLR) and Archimedean Kernel Rigidity (AKR) constraints by rejecting responses that assert perpetual local homogeneity under rich cycle overlap or persistent global effects without local support under decay. Usage: pipe text to standard input and receive an ACCEPT or REJECT verdict.
-
-Core results (intended to be mirrored by the manuscript PDF)
-- URF–CMI Subadditivity (primitive axiom)
-- Prefab Composition Admissibility (PCA)
-- CURF categorical semantics (interfaces as bounded-information morphisms)
-- Sink Closure necessity (no sink implies unbounded EntropyDepth)
-- Typecheck ⇔ Certificate verification (meta-theorem)
-
-No applications, tutorials, or GUI are included here.
+Structural definitions and interfaces for prefab URF components
+Explicit assumption tracking
+Clear separation between proven structure and conditional extensions
+What this repository does not claim
+No completeness or optimality theorems
+No claims beyond explicitly listed assumptions
+No closed-form solutions to downstream URF problems
+Navigation
+STATUS.md: proven, conditional, open items
+ASSUMPTIONS.md: explicit assumption index
+REFEREE_MAP.md: guided reading paths
+Status
+Active, scope-locked, externally reviewable
