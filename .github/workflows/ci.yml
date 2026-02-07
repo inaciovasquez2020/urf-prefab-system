@@ -25,3 +25,11 @@ steps:
     run: |
       chmod +x tools/validate_prefab.sh
       tools/validate_prefab.sh
+  - name: Install Python dependencies
+    run: |
+      python3 -m pip install --upgrade pip
+      pip install -r requirements.txt
+
+  - name: Validate prefab JSON schema
+    run: |
+      python3 tools/validate_json_schema.py
