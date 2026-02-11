@@ -17,3 +17,33 @@ ASSUMPTIONS.md: explicit assumption index
 REFEREE_MAP.md: guided reading paths
 Status
 Active, scope-locked, externally reviewable
+
+## Quickstart (60 seconds)
+
+```bash
+lake update
+lake build
+
+
+---
+
+## 3) Add STATUS document
+```zsh
+cat > STATUS.md <<'EOF'
+# Repository Status — URF Prefab System
+
+Code: Stable
+Formalization: Lean 4 / Lake
+CI: Enforced
+
+## What this repo guarantees
+- Deterministic Lean builds under the declared toolchain
+- Canonical prefab definitions typecheck and elaborate
+
+## What it verifies
+- Structural correctness of prefab system modules
+- Importability of the canonical root namespace
+
+## What it does not claim
+- No claim of completeness beyond included modules
+- No claim of downstream application correctness
