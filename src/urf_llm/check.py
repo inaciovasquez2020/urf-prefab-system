@@ -13,19 +13,35 @@ def check_text(input_text: str) -> bool:
     """
     lowered = input_text.lower()
 
-    has_homogeneity = "perfect local homogeneity" in lowered
-    has_all_radii = "all radii" in lowered
-    has_unbounded_overlap = (
-        "unbounded cycle overlap" in lowered
-        or ("unbounded" in lowered and "cycle overlap" in lowered)
+    # Strong homogeneity / indistinguishability claims
+    has_strong_homogeneity = (
+        "perfect local homogeneity" in lowered
+        or "locally indistinguishable" in lowered
     )
+
+    # Claims of persistence at all scales or forever
+    has_global_extent = (
+        "all radii" in lowered
+        or "everywhere" in lowered
+        or "forever" in lowered
+    )
+
+    # Rich cycle structure
+    has_many_cycles = (
+        "unbounded cycle overlap" in lowered
+        or "many cycles" in lowered
+        or ("unbounded" in lowered and "cycle" in lowered)
+    )
+
+    # Explicit or implicit lack of local witness / break
     has_no_witness = (
         "no local witness" in lowered
         or "without any local witness" in lowered
         or "without a local witness" in lowered
+        or "even with" in lowered
     )
 
-    if has_homogeneity and has_all_radii and has_unbounded_overlap and has_no_witness:
+    if has_strong_homogeneity and has_global_extent and has_many_cycles and has_no_witness:
         return False
 
     return True
@@ -86,4 +102,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
