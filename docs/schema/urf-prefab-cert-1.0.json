@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://inaciovasquez2020.github.io/urf/schema/urf-prefab-cert-1.0.json",
   "title": "URF Prefab Certificate v1.0",
+  "x-status": "FROZEN"
   "type": "object",
   "required": [
     "schema",
