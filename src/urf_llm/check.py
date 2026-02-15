@@ -50,12 +50,14 @@ def check_text(input_text: str) -> bool:
 def make_certificate(input_text: str) -> dict:
     """
     Minimal deterministic admissibility certificate.
+    Hash-bound to the frozen ruleset.
     """
     return {
         "schema": "urf-prefab-cert/1.0",
         "verdict": "ACCEPT",
         "checker": "urf-llm-check",
         "ruleset": "prefab-admissibility",
+        "ruleset_hash": "7eb46ce7dd9ed2371d0c2cdb4e32afe174be2c8d1aa2f58577149bc6ee5a5c3e",
         "input_hash": hashlib.sha256(
             input_text.encode("utf-8")
         ).hexdigest(),
@@ -91,8 +93,7 @@ def main() -> None:
         if args.emit_cert:
             print(json.dumps(make_certificate(input_text), sort_keys=True))
         elif args.json:
-            payload = {"verdict": "ACCEPT"}
-            print(json.dumps(payload, sort_keys=True))
+            print(json.dumps({"verdict": "ACCEPT"}, sort_keys=True))
 
         sys.exit(0)
     else:
@@ -102,5 +103,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
 
