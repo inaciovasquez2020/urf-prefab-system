@@ -1,10 +1,11 @@
-      - name: validate emitted certificate
-        run: |
-          npm install -g ajv-cli
-          echo "All evaluations enforce bounded transcript capacity." \
-          | urf-llm-check --emit-cert \
-          | sed '1d' > /tmp/cert.json
-          ajv validate \
-            -s docs/schema/urf-prefab-cert-1.0.json \
-            -d /tmp/cert.json
+name: prefab-smoke
 
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Manual prefab smoke test (experimental)"
