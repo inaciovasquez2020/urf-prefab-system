@@ -113,3 +113,8 @@ Assumption and invariant discipline
 Certification hook alignment
 No semantic or execution guarantees are inherited.
 >>>>>>> origin/main
+
+## Registry Role
+
+This repository defines **canonical prefab structures**.
+It does not define new theory and must remain invariant-compatible with URF Core.
