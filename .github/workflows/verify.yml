@@ -1,0 +1,6 @@
+
+      - name: Prefab invariant checks
+        run: |
+          test -f docs/PREFAB_SPEC.md
+          test -f docs/REFEREE_OVERVIEW.md
+          test -f CONTRIBUTING.md

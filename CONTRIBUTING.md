@@ -1,17 +1,17 @@
-Contributing Guidelines
-Scope discipline
-Contributions must respect declared scope and non-goals
-No new claims without updating STATUS.md and ASSUMPTIONS.md
-Structure rules
-New prefab-related documents go under docs/
-Scripts go under tools/
-CI changes must remain minimal and deterministic
-Assumptions and invariants
-Any new assumption must be added to ASSUMPTIONS.md
-Prefab examples must reference assumption IDs explicitly
-Review process
-Small, atomic commits
-Clear commit messages describing structural intent
-No force-pushes to main
-License
-Contributions are accepted under the repository license
+# Contributing to URF Prefab System
+
+## Purpose
+Prefab system contributions must preserve determinism and reproducibility.
+
+## Rules
+- Add or modify features only with invariant justification.
+- CI must remain green.
+- Follow the specification in docs/PREFAB_SPEC.md.
+
+## Allowed
+- Adding new example workflows
+- Improving documentation
+- CI robustness and tooling
+
+## Disallowed
+- Changing prefab semantics without specification updates
